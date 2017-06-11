@@ -21,10 +21,10 @@ app.config(["$routeProvider", function ($routeProvider) {
             templateUrl: "app/Partials/Login.html",
             controller: "LoginController"
         })
-    .when("/recptadd",
+    .when("/recpt",
         {
-            templateUrl: "app/Partials/RecptAdd.html",
-            controller: "RecptAddController"
+            templateUrl: "app/Partials/Recpt.html",
+            controller: "RecptController"
         })
     .when("/recptlist",
         {
