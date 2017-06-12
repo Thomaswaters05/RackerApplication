@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
+using System.Data.Entity;
 
 namespace RackerApplication.Models
 {
@@ -29,6 +30,9 @@ namespace RackerApplication.Models
         {
         }
         
+        public DbSet<Receipt> Receiptz { get; set; }
+       
+
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();

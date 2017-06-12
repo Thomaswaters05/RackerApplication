@@ -1,0 +1,11 @@
+﻿<div class="form-group">
+    <label for="name">Receipt Name</label>
+    <input type="text" class="form-control" id="name" placeholder="Name" ng-model="receipt.Name">
+</div>
+
+<div class="form-group">
+    <label for="iscomplete">is complete</label>
+    <input type="checkbox" id="isComplete" ng-model="receipt.IsComplete">
+</div>
+
+<button ng-click="submit(receipt)">Submit</button>

@@ -21,27 +21,20 @@ app.config(["$routeProvider", function ($routeProvider) {
             templateUrl: "app/Partials/Login.html",
             controller: "LoginController"
         })
-    .when("/recptadd",
-        {
-            templateUrl: "app/Partials/RecptAdd.html",
-            controller: "RecptAddController"
-        })
-    .when("/recptlist",
-        {
-            templateUrl: "app/Partials/RecptList.html",
-            controller: "RecptListController"
-        })
-    .when("/useradd",
-        {
-            templateUrl: "app/Partials/UserAdd.html",
-            controller: "UserAddController"
-        })
-     .when("/userlist",
-        {
-            templateUrl: "app/Partials/UserList.html",
-            controller: "UserListController"
-        })
-}])
+
+                .when('/list', {
+                    templateUrl: 'app/partials/list.html',
+                    controller: 'listController'
+                })
+                .when('/add', {
+                    templateUrl: 'app/partials/add.html',
+                    controller: 'addController'
+                })
+                .when('/detail', {
+                    templateUrl: 'app/partials/detail.html',
+                    controller: 'detailController'
+                });
+}]);
 
 
 app.run(["$http", function ($http) {
