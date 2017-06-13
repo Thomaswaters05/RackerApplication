@@ -23,15 +23,15 @@ app.config(["$routeProvider", function ($routeProvider) {
         })
 
                 .when('/list', {
-                    templateUrl: 'app/partials/list.html',
+                    templateUrl: 'app/Partials/list.html',
                     controller: 'listController'
                 })
                 .when('/add', {
-                    templateUrl: 'app/partials/add.html',
+                    templateUrl: 'app/Partials/add.html',
                     controller: 'addController'
                 })
                 .when('/detail', {
-                    templateUrl: 'app/partials/detail.html',
+                    templateUrl: 'app/Partials/detail.html',
                     controller: 'detailController'
                 });
 }]);

@@ -9,18 +9,18 @@
         $scope.btnText = "Save";
         
 
-        $scope.receiptSave = {
-            FirstName: $scope.firstName,
-            LastName: $scope.firstName,
-            ReceiptName: $scope.receiptName,
-            ReceiptPrice: $scope.receiptPrice,
-            //!!not sure how to add iscomplete portion!!
+        $scope.receipt = {
+            FirstName: "",
+            IsComplete: false,
+            ReceiptName: "",
+            RecieptPrice: ""
         };
 
         $scope.submit = function (receipt) {
             
             $http.post('/api/receipt', receipt)
                 .then(function (res) {
+                    console.log(res)
                     //Redirects 2 list page
                     $location.path('/list');
                 });

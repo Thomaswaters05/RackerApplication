@@ -7,17 +7,14 @@
     function listController($scope, $http) {
         $scope.welcome = "list controller working";
 
-        //the empty list to iterate through on the screen
+        //this is what iterates in add html
         $scope.list = [];
 
-        /*
-            this $http call will fire immediately when the 
-            list controller is called (when you navigate to the page).
-            This hits our API with a HTTP GET request.
-        */
         $http.get('/api/receipt')
             .then(function (res) {
                 $scope.list = res.data;
+                console.log($scope.list);
+                
             });
 
     }

@@ -1,5 +1,36 @@
-﻿{{welcome}}
+﻿
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<!--BELOW IS FOR REFERENCE-->
+        <!--<ul ng-repeat="receipt in list">
+            <li>{{receipt.firstName}}</li>
+            <li>{{receipt.isComplete}} </li>
+            <li>{{receipt.receiptName}}</li>
+            <li>{{receipt.receiptPrice}}</li>
+        </ul>-->
+<!--ABOVE IS FOR REFERENCE-->
 
-<ul>
-    <li ng-repeat="receipt in list">{{receipt.name}} {{receipt.isComplete}}</li>
-</ul>
+<h3><b>My Receipts<b></h3>
+<div class="container">
+    <table class="centered">
+        <thead>
+            <tr style="border:0;">
+                <th data-field="name">Receipt Name</th>
+                <th data-field="price">Price</th>
+            </tr>
+        </thead>
+        
+        <tbody class="pushUp">
+            <tr ng-repeat="receipt in list" | filter:{isCompleted:false}| filter: searchText" class="highlight">
+                <input type="checkbox" ng-model="receipt.isCompleted" ng-change="inputChange(receipt)">
+                <td><a><!--<a class="waves-effect waves-light btn" href="#/wishlist/{{friend.id}}"><i class="fa fa-tree"></i>--> {{receipt.firstName}}</a></td>
+                <td><b>${{receipt.receiptPrice}}</b></td>
+                <td><button ng-click="deleteFriend(receipt.id)" class="fa fa-trash"></button> </td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <table class="centered">
+        <div ng-model="total">
+            <td><b>Total Receipt Amount :</b> <br> <br><div id="budget">${{total}}</div> </td>
+        </div>
+</div>

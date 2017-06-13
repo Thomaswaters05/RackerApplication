@@ -27,7 +27,8 @@ namespace RackerApplication
                       .IncludeDirectory("~/app", "*.js", true));
 
             bundles.Add(new ScriptBundle("~/bundles/materialize").Include(
-                     "~/Content/js/materialize.js"));
+                     "~/Content/js/materialize.js",
+                     "~/Content/js/materialize.min.js"));
         }
     }
 }
