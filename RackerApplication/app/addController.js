@@ -5,7 +5,6 @@
     addController.$inject = ['$scope', '$http', '$location'];
 
     function addController($scope, $http, $location) {
-        $scope.welcome = "add controller working";
         $scope.btnText = "Save";
         
 

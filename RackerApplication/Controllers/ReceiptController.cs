@@ -6,6 +6,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 
+
 namespace RackerApplication.Controllers
     { 
         public class ReceiptController : ApiController
@@ -31,5 +32,11 @@ namespace RackerApplication.Controllers
                 _context.Receiptz.Add(newReceipt);
                 _context.SaveChanges();
             }
-        }
+
+
+        //THIS IS RECENTLY ADDED BELOW
+
+
+
     }
+}
