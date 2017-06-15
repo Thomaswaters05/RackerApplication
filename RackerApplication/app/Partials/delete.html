@@ -1,0 +1,43 @@
+﻿<h3>
+    Are you want to sure to delete this receipt?
+</h3>
+<hr />
+
+<form class="form-horizontal" style="max-width: 500px;">
+
+    <p>
+        <label for="firstname">
+            First Name:
+        </label>
+        <p>{{receipt.firstName}}</p>
+    </p>
+
+    <p>
+        <label for="receiptname">
+            Receipt Name:
+        </label>
+        <p>{{receipt.receiptName}}</p>
+    </p>
+
+
+    <p>
+        <label for="rp">
+            ReceiptPrice
+        </label>
+        <p>${{receipt.recieptPrice}}</p>
+    </p>
+
+
+    <p>
+        <label>
+            <input type="checkbox" ng-model="active" />Active
+        </label>
+        <div class="col-xs-offset-3 col-xs-9 text-center">
+            <a href="#!/list" class="btn btn-info">Back to List</a>
+
+            <button type="submit" class="btn btn-primary" ng-click="delete()">
+                Delete
+            </button>
+        </div>
+    </p>
+</form>

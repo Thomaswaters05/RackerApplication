@@ -1,0 +1,42 @@
+﻿<h3>
+    {{title}}
+</h3>
+<hr />
+<form style="max-width: 500px;">
+
+    <div class="input-field col s6">
+        <label for="firstname">
+            First Name:
+        </label>
+        <p>{{receipt.firstName}}</p>
+        <input type="text" class="form-control" id="FirstName" ng-model="receipt.FirstName" />
+    </div>
+
+    <div class="input-field col s6">
+        <label for="lastname">
+            Receipt Name:
+        </label>
+        <p>{{receipt.receiptName}}</p>
+        <input type="text" class="form-control" id="ReceiptName" ng-model="receipt.ReceiptName"/>
+    </div>
+  
+   
+    <div class="input-field col s6">
+        <label for="rp">
+            ReceiptPrice
+        </label>
+        <p>${{receipt.recieptPrice}}</p>
+        <input type="text" class="form-control" id="Receiptprice"  ng-model="receipt.RecieptPrice" />
+    </div>
+
+    <div class="form-group checkbox">
+        <label>
+            <input type="checkbox" ng-model="active" />Active
+        </label>
+
+    </div>
+    <a href="#!/list" class="btn btn-info">Back to List</a>
+    <button type="submit" class="btn btn-default" ng-click="save()">
+        Edit
+    </button>
+</form>

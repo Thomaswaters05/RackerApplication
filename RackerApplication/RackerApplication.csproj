@@ -293,15 +293,17 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\app.js" />
-    <Content Include="app\detailController.js" />
+    <Content Include="app\editController.js" />
     <Content Include="app\HomeController.js" />
     <Content Include="app\LoginController.js" />
+    <Content Include="app\Partials\delete.html" />
+    <Content Include="app\deleteController.js" />
     <Content Include="app\Partials\Home.html" />
     <Content Include="app\Partials\Login.html" />
     <Content Include="app\Partials\add.html" />
     <Content Include="app\Partials\list.html" />
     <Content Include="app\Partials\SignUp.html" />
-    <Content Include="app\Partials\detail.html" />
+    <Content Include="app\Partials\edit.html" />
     <Content Include="app\addController.js" />
     <Content Include="app\SignUpController.js" />
     <Content Include="app\listController.js" />

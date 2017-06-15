@@ -30,10 +30,15 @@ app.config(["$routeProvider", function ($routeProvider) {
                     templateUrl: 'app/Partials/add.html',
                     controller: 'addController'
                 })
-                .when('/detail', {
-                    templateUrl: 'app/Partials/detail.html',
-                    controller: 'detailController'
-                });
+                .when('/edit/:id', {
+                    templateUrl: 'app/Partials/edit.html',
+                    controller: 'editController'
+                })
+               .when('/delete/:id', {
+                    templateUrl: 'app/Partials/delete.html',
+                    controller: 'deleteController'
+               });
+               
 }]);
 
 

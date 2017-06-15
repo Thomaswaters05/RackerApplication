@@ -21,10 +21,19 @@
         <tbody class="pushUp">
             <tr ng-repeat="receipt in list" | filter:{isCompleted:false}| filter: searchText" class="highlight">
                 <input type="checkbox" ng-model="receipt.isCompleted" ng-change="inputChange(receipt)">
-                <td><a><!--<a class="waves-effect waves-light btn" href="#/wishlist/{{friend.id}}"><i class="fa fa-tree"></i>--> {{receipt.firstName}}</a></td>
+                <td><a>{{receipt.firstName}}</a></td>
                 <td><b>{{receipt.receiptName}}</b></td>
                 <td><b>${{receipt.recieptPrice}}</b></td>
-                <td><button ng-click="deleteFriend(receipt.id)" class="fa fa-trash"></button> </td>
+
+                
+                <td><a href="#!/edit/{{receipt.id}}" class="btn"></a>Edit</td>
+                <td><a href="#!/delete/{{receipt.id}}" class="btn" ></a>Delete</td>
+
+
+
+                
+
+                
             </tr>
         </tbody>
     </table>

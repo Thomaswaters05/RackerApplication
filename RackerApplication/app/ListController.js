@@ -16,6 +16,5 @@
                 console.log($scope.list);
                 
             });
-
     }
 })();

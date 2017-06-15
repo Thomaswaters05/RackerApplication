@@ -18,6 +18,7 @@ namespace RackerApplication
 
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
+                      "~/Content/font-awesome.min.css",
                       "~/Content/css/materialize.css"));
 
             bundles.Add(new ScriptBundle("~/bundles/angular").Include(
