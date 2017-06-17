@@ -40,11 +40,19 @@ namespace RackerApplication.Controllers
             return _context.Receiptz.Find(id);
         }
 
-        public HttpResponseMessage Put(Receipt model)
+        [Route("api/receipt/")]
+        [HttpPut]
+        public HttpResponseMessage Edit(Receipt model)
         {
             if (ModelState.IsValid)
             {
-                _context.Entry(model).State = System.Data.Entity.EntityState.Modified;
+                var x = Get(model.Id);
+
+                x.FirstName = model.FirstName;
+                x.ReceiptName = model.ReceiptName;
+                x.RecieptPrice = model.RecieptPrice;
+                x.IsComplete = model.IsComplete;
+
                 _context.SaveChanges();
 
                 HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.OK, model);

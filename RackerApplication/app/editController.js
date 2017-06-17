@@ -6,12 +6,13 @@
 
 
     function editController($scope, $http, $routeParams, $location) {
-        
-        $http.get('/api/receipt/').then(function (response) {
-            $scope.receipt = response.data;
-        });
+        $scope.receipt = {};
 
-        $scope.id = 0;
+        //$http.get('/api/receipt/').then(function (response) {
+        //    $scope.receipt = response.data;
+        //    console.log("scoperec",$scope.receipt);
+        //});
+
 
         
         $scope.getReceipt = function () {
@@ -19,6 +20,7 @@
             if (recEdit) {
                 $http.get('/api/Receipt/' + recEdit).then(function (data) {
                     $scope.receipt = data;
+                    console.log(recEdit);
                 });
             }
             else {
@@ -29,20 +31,13 @@
         $scope.save = function () {
 
             var recObj = {
-                Id: $scope.Id,
-                FirstName: $scope.FirstName,
-                ReceiptName: $scope.ReceiptName,
-                Receiptprice: $scope.Receiptprice
+                Id: $scope.id,
+                FirstName: $scope.receipt.firstName,
+                ReceiptName: $scope.receipt.receiptName,
+                Recieptprice: $scope.receipt.recieptPrice
 
             };
-
-            if ($scope.id === 0) {
-                $http.post('/api/Receipt/', recObj).then(function (data) {
-                    $location.path('/list');
-                }, (function (data) {
-                    $scope.error = "not working bro.. " + data.ExceptionMessage;
-                }));
-            }
+            console.log("this is recObj",recObj)
 
             $http.put('/api/Receipt/', recObj).then(function (data) {
                 $location.path('/list');
@@ -60,7 +55,6 @@
             $http.get('/api/receipt/' + $routeParams.id).then(function (response) {
                 $scope.receipt = response.data;
 
-                $scope.getReceipt();
             });
         }
         else {

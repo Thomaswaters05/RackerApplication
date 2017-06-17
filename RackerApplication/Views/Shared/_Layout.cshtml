@@ -8,15 +8,15 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body ng-app="RackerApplication">
-    
-              
-            
+   
     <nav>
         <div class="nav-wrapper">
             <a href="#" class="brand-logo">Logo</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, null)</li>
-                <li>@Html.ActionLink("API", "Index", "Help", new { area = "" }, null)</li>
+                <li><a href="#!/list">My Receipts</a></li>
+                <li><a href="#!/add">Add Receipt</a></li>
+                <li><a href="#!/add">Logout</a></li>
+                <li><a href="https://github.com/Thomaswaters05/RackerApplication">My Code</a></li>
             </ul>
         </div>
     </nav>

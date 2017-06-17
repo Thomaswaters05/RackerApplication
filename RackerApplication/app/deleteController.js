@@ -7,6 +7,7 @@
 
     function deleteController($scope, $http, $routeParams, $location) {
         $scope.id = $routeParams.id;
+
         $http.get('/api/receipt/' + $routeParams.id).then(function (response) {
             $scope.receipt = response.data;
             

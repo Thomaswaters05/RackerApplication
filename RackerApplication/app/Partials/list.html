@@ -1,13 +1,4 @@
-﻿<!--BELOW IS FOR REFERENCE-->
-        <!--<ul ng-repeat="receipt in list">
-            <li>{{receipt.firstName}}</li>
-            <li>{{receipt.isComplete}} </li>
-            <li>{{receipt.receiptName}}</li>
-            <li>{{receipt.receiptPrice}}</li>
-        </ul>-->
-<!--ABOVE IS FOR REFERENCE-->
-
-<h3><b>My Receipts<b></h3>
+﻿<h3><b>My Receipts<b></h3>
 <div class="container">
     <table class="centered">
         <thead>
@@ -26,14 +17,8 @@
                 <td><b>${{receipt.recieptPrice}}</b></td>
 
                 
-                <td><a href="#!/edit/{{receipt.id}}" class="btn"></a>Edit</td>
-                <td><a href="#!/delete/{{receipt.id}}" class="btn" ></a>Delete</td>
-
-
-
-                
-
-                
+                <td><a href="#!/edit/{{receipt.id}}" class="btn"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></td>
+                <td><a href="#!/delete/{{receipt.id}}" class="btn"> <i class="fa fa-trash" aria-hidden="true"></i></a></td>
             </tr>
         </tbody>
     </table>

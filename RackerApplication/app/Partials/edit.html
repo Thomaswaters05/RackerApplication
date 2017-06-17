@@ -4,29 +4,19 @@
 <hr />
 <form style="max-width: 500px;">
 
+    <label>Name</label>
     <div class="input-field col s6">
-        <label for="firstname">
-            First Name:
-        </label>
-        <p>{{receipt.firstName}}</p>
-        <input type="text" class="form-control" id="FirstName" ng-model="receipt.FirstName" />
+       <input type="text" class="form-control" id="FirstName" ng-model="receipt.firstName" />
     </div>
 
+    <label>Recept Name</label>
     <div class="input-field col s6">
-        <label for="lastname">
-            Receipt Name:
-        </label>
-        <p>{{receipt.receiptName}}</p>
-        <input type="text" class="form-control" id="ReceiptName" ng-model="receipt.ReceiptName"/>
+        <input type="text" class="form-control" id="ReceiptName" ng-model="receipt.receiptName"/>
     </div>
   
-   
+    <label>Recept Price</label>
     <div class="input-field col s6">
-        <label for="rp">
-            ReceiptPrice
-        </label>
-        <p>${{receipt.recieptPrice}}</p>
-        <input type="text" class="form-control" id="Receiptprice"  ng-model="receipt.RecieptPrice" />
+        <input type="number" class="form-control" id="Recieptprice"  ng-model="receipt.recieptPrice" />
     </div>
 
     <div class="form-group checkbox">
@@ -37,6 +27,6 @@
     </div>
     <a href="#!/list" class="btn btn-info">Back to List</a>
     <button type="submit" class="btn btn-default" ng-click="save()">
-        Edit
+        Save
     </button>
 </form>
