@@ -1,4 +1,9 @@
-﻿(function () {
+﻿function pay() {
+    $(".receipt").slideUp("slow");
+    $(".paid").slideDown("slow");
+}
+
+(function () {
     angular.module('RackerApplication')
         .controller('editController', editController);
   

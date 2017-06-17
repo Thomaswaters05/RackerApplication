@@ -1,21 +1,4 @@
-﻿<!--<div class="input-field col s6">
-    <input placeholder="" type="text" class="validate" ng-model="username">
-    <label for="first_name">UserName</label>
-    <p>{{testLogin}}</p>
-</div>
-
-
-<div class="input-field col s6">
-    <input placeholder="" type="text" class="validate" ng-model="password">
-    <label for="first_name">Password</label>
-    <a href="#!/signup" class="btn">Sign Up!</a>
-    <input type="button" value="Login" class="btn" ng-click="login()" />
-</div>-->
-
-
-
-
-<html>
+﻿<html>
 
 <head>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -53,14 +36,12 @@
 </head>
 
 <body>
-    <div class="section"></div>
     <main>
         <center>
-            <img class="responsive-img" style="width: 250px;" src="https://i.imgur.com/ax0NCsK.gif" />
-            <div class="section"></div>
 
-            <h5 class="indigo-text">Please, login into your account</h5>
-            <div class="section"></div>
+            <h2 class="indigo-text">Welcome To Racker! </h2>
+            <h5 class="indigo-text"> Login To Track & Save </h5>
+            
 
             <div class="container">
                 <div class="z-depth-1 grey lighten-4 row" style="display: inline-block; padding: 32px 48px 0px 48px; border: 1px solid #EEE;">
@@ -72,16 +53,18 @@
                         </div>
 
                         <div class='row'>
+                            <label for='email'>Enter your email</label>
                             <div class='input-field col s12'>
                                 <input class='validate' type='email' name='email' id='email'  ng-model="username" />
-                                <label for='email'>Enter your email</label>
+                               
                             </div>
                         </div>
 
                         <div class='row'>
+                            <label for='password'>Enter your password</label>
                             <div class='input-field col s12'>
                                 <input class='validate' type='password' name='password' id='password' ng-model="password" />
-                                <label for='password'>Enter your password</label>
+                                
                             </div>
                             <label style='float: right;'>
                                 <a class='pink-text' href='#!'><b>Forgot Password?</b></a>
@@ -91,7 +74,7 @@
                         <br />
                         <center>
                             <div class='row'>
-                                <input type="button" value="Login" class="btn" ng-click="login()" />
+                                <a class="waves-effect waves-light btn" value="Login" class="btn" ng-click="login()">Login</a>
                             </div>
                         </center>
                     </form>

@@ -1,11 +1,18 @@
-﻿(function () {
+﻿function pay() {
+    $(".receipt").slideUp("slow");
+    $(".paid").slideDown("slow");
+}
+
+(function () {
     angular.module('RackerApplication')
         .controller('addController', addController);
+
 
     addController.$inject = ['$scope', '$http', '$location'];
 
     function addController($scope, $http, $location) {
         $scope.btnText = "Save";
+        
         
 
         $scope.receipt = {

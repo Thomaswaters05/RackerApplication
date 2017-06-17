@@ -1,24 +1,89 @@
-﻿<div class="input-field col s6">
-    <label for="">First Name</label>
-    <input type="text" class="form-control" id="Firstname"  ng-model="receipt.FirstName">
-</div>
+﻿<h3 class="center">
+    Add New Receipt:
+</h3>
+
+<div class="container">
+    <div class="tab"></div>
+    <div class="paid">
+        <p>Receipt Added Successfully</p>
+        <a class="waves-effect waves-light btn" id="paid1" ng-click="submit(receipt)">Return to Receipts</a>
+    </div>
+
+    <div class="receipt">
+        <div class="paper">
+            <div class="title">Receipt Info:</div>
+            <div class="date">Date: 07/30/2016</div>
+            <table>
+                <tbody>
+
+                    <tr>
+                        <td>
+                            <label for="Firstname">First Name</label>
+                            <input id="Firstname" ng-model="receipt.FirstName" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="Firstname">Company Name</label>
+                            <input id="Receiptname" ng-model="receipt.ReceiptName" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="Firstname">Receipt Price</label>
+                            <input id="Receiptprice" ng-model="receipt.RecieptPrice" />
+                        </td>
+                    </tr>
+
+                    <tr><td colspan="2" class="center"><input type="button" value="Add Now" onClick="pay()" /></td></tr>
+
+                </tbody>
+            </table>
+            <div class="sign center">
+                <div class="barcode"></div>
+                <br />
+                0123456789
+                <br />
+                <div class="thankyou">
+                    Thank you for your business
+                </div>
+            </div>
+        </div>
+
+        <div>
+        </div>
 
 
-<div class="input-field col s6">
-    <label for="">Receipt Name</label>
-    <input type="text" class="form-control" id="Receiptname" ng-model="receipt.ReceiptName">
-</div>
 
-<div class="input-field col s6">
-    <label for="">Reciept Price</label>
-    <input type="text" class="form-control" id="Receiptprice"  ng-model="receipt.RecieptPrice">
-</div>
+        <!--<h3>
+            Add New Receipt:
+        </h3>
+        <hr />
 
-<!--<form action="#">
-    <p>
-        <input type="checkbox" id="test5" ng-model="receipt.IsComplete" />
-        <label for="test5">Is Complete?</label>
-    </p>
-</form>-->
+        <div style="width: 100%">
 
-    <button ng-click="submit(receipt)">Add</button>
+            <img style="float:right;" src="http://www.lily-liste.com/media/images/Visuel_Page_Urne.jpg" alt="Related image" />
+            <form style="max-width: 500px;">
+
+                <div class="input-field col s6">
+                    <label for="">First Name</label>
+                    <input type="text" class="form-control" id="Firstname" ng-model="receipt.FirstName">
+                </div>
+
+                <div class="input-field col s6">
+                    <label for="">Receipt Name</label>
+                    <input type="text" class="form-control" id="Receiptname" ng-model="receipt.ReceiptName">
+                </div>
+
+                <div class="input-field col s6">
+                    <label for="">Reciept Price</label>
+                    <input type="text" class="form-control" id="Receiptprice" ng-model="receipt.RecieptPrice">
+                </div>
+                <form action="#">
+                    <p>
+                        <input type="checkbox" id="test5" ng-model="receipt.IsComplete" />
+                        <label for="test5">Is Complete?</label>
+                    </p>
+                </form>
+
+                <button ng-click="submit(receipt)">Add</button>

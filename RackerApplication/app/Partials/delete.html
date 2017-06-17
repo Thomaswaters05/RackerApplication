@@ -1,43 +1,103 @@
-﻿<h3>
+﻿<h3 class="center">
     Are you want to sure to delete this receipt?
 </h3>
 <hr />
 
-<form class="form-horizontal" style="max-width: 500px;">
+<div class="container">
+    <div class="tab"></div>
+    <div class="paid">
+        <p>Receipt Deleted Successfully</p>
+        <a class="waves-effect waves-light btn" id="paid1" ng-click="delete()">Return to Receipts</a>
+    </div>
 
-    <p>
-        <label for="firstname">
-            First Name:
-        </label>
-        <p>{{receipt.firstName}}</p>
-    </p>
+    <div class="receipt">
+        <div class="paper">
+            <div class="title">Receipt Info:</div>
+            <div class="date">Date: 07/30/2016</div>
+            <table>
+                <tbody>
 
-    <p>
-        <label for="receiptname">
-            Receipt Name:
-        </label>
-        <p>{{receipt.receiptName}}</p>
-    </p>
+                    <tr>
+                        <td>
+                            <label for="Firstname">First Name</label>
+                            <h5>{{receipt.firstName}}</h5> 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="Company">Company Name</label>
+                            <h5>{{receipt.receiptName}}</h5>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="Rectname">Receipt Price</label>
+                            <h5>${{receipt.recieptPrice}}</h5>
+                        </td>
+                    </tr>
 
+                    <tr><td colspan="2" class="center"><input type="button" value="Delete Now" onClick="pay()" /></td></tr>
 
-    <p>
-        <label for="rp">
-            ReceiptPrice
-        </label>
-        <p>${{receipt.recieptPrice}}</p>
-    </p>
-
-
-    <p>
-        <label>
-            <input type="checkbox" ng-model="active" />Active
-        </label>
-        <div class="col-xs-offset-3 col-xs-9 text-center">
-            <a href="#!/list" class="btn btn-info">Back to List</a>
-
-            <button type="submit" class="btn btn-primary" ng-click="delete()">
-                Delete
-            </button>
+                </tbody>
+            </table>
+            <div class="sign center">
+                <div class="barcode"></div>
+                <br />
+                0123456789
+                <br />
+                <div class="thankyou">
+                    Thank you for your business
+                </div>
+            </div>
         </div>
-    </p>
-</form>
+
+        <div>
+        </div>
+
+
+
+
+        <!--<img style="float:right;" src="https://www.iconexperience.com/_img/v_collection_png/256x256/shadow/money2_delete.png" alt="Image result for delete receipt" />
+
+        <form class="form-horizontal" style="max-width: 500px;">
+
+            <p>
+                <label for="firstname">
+                    First Name:
+                </label>
+            <p>{{receipt.firstName}}</p>
+            <hr />
+            </p>
+
+            <p>
+                <label for="receiptname">
+                    Receipt Name:
+                </label>
+            <p>{{receipt.receiptName}}</p>
+            <hr />
+            </p>
+
+
+            <p>
+                <label for="rp">
+                    ReceiptPrice
+                </label>
+            <p>${{receipt.recieptPrice}}</p>
+            <hr />
+            </p>
+
+
+            <p>
+                <label>
+                    <input type="checkbox" ng-model="active" />Active
+                </label>
+
+                <div class="col-xs-offset-3 col-xs-9 text-center">
+                    <a href="#!/list" class="btn btn-info">Back to List</a>
+
+                    <button type="submit" class="btn btn-primary" ng-click="delete()">
+                        Delete
+                    </button>
+                </div>
+            </p>
+        </form>-->

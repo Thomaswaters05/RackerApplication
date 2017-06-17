@@ -1,11 +1,14 @@
-﻿<h3><b>My Receipts<b></h3>
+﻿<h3 class="center"><b>My Receipts<b></h3>
+
 <div class="container">
-    <table class="centered">
+    <table class="highlight responsive-table" >
         <thead>
-            <tr style="border:0;">
+            <tr>
                 <th data-field="name">Buyer</th>
-                <th data-field="name">Receipt Name</th>
+                <th data-field="name">Company Name</th>
                 <th data-field="price">Price</th>
+                <th data-field="price"></th>
+                <th data-field="price"></th>
             </tr>
         </thead>
         
@@ -15,8 +18,6 @@
                 <td><a>{{receipt.firstName}}</a></td>
                 <td><b>{{receipt.receiptName}}</b></td>
                 <td><b>${{receipt.recieptPrice}}</b></td>
-
-                
                 <td><a href="#!/edit/{{receipt.id}}" class="btn"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></td>
                 <td><a href="#!/delete/{{receipt.id}}" class="btn"> <i class="fa fa-trash" aria-hidden="true"></i></a></td>
             </tr>
@@ -25,6 +26,14 @@
     
     <table class="centered">
         <div ng-model="total">
-            <td><b>Total Receipt Amount :</b> <br> <br><div id="budget">${{total}}</div> </td>
+            <td><b>Total Receipt Amount :</b><h5>${{total}}</h5></td>
         </div>
 </div>
+
+
+
+
+
+
+
+

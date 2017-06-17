@@ -308,12 +308,14 @@
     <Content Include="app\SignUpController.js" />
     <Content Include="app\listController.js" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
+    <Content Include="Content\background\playstation-pattern.png" />
     <Content Include="Content\css\materialize.css" />
     <Content Include="Content\css\materialize.min.css" />
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\js\materialize.js" />
     <Content Include="Content\js\materialize.min.js" />
+    <Content Include="Content\css\Site.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
