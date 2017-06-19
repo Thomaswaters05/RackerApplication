@@ -13,7 +13,7 @@
         </thead>
         
         <tbody class="pushUp">
-            <tr ng-repeat="receipt in list" | filter:{isCompleted:false}| filter: searchText" class="highlight">
+            <tr ng-repeat="receipt in list" | filter: searchText" class="highlight">
                 <input type="checkbox" ng-model="receipt.isCompleted" ng-change="inputChange(receipt)">
                 <td><a>{{receipt.firstName}}</a></td>
                 <td><b>{{receipt.receiptName}}</b></td>
